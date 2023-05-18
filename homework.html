@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+table {
+	border : 1px solid violet;
+	border-collapse : collapse;
+}
+td {
+	width : 50px;
+	height : 50px;
+	padding : 0px;
+	font : italic 50px consolas, sans-serif;
+	color : blue;
+	text-align: center;
+	background: linen;
+}
+div#msg {
+	font : italic 18px consolas, sans-serif;
+	color : magenta;
+	margin-top : 10px;
+}
+</style>
+<script>
+    var gameon = true;
+    var gameArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    var setArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    
+    function numcount() {
+        if (n == 1) {
+            
+        } 
+    }
+    
+    function gen(obj) {
+    if(gameon == false)
+    return;
+    
+    var n = Math.floor(Math.random()*3) + 1;
+    if (obj.id == "1" && gameArray[0] == 0 {
+    gameArray[0] = n;
+    set Array[0] = 1;
+    }
+    else if (obj.id == "2" && gameArray[1] == 0) {
+        gameArray[1] = n;
+        setArray[1] = 1;
+    }
+    else if (obj.id == "3" && gameArray[2] == 0) {
+        gameArray[1] = n;
+        setArray[2] = 1;
+    }
+    else if (obj.id == "4" && gameArray[3] == 0) {
+        gameArray[1] = n;
+        setArray[3] = 1;
+    }
+    else if (obj.id == "5" && gameArray[4] == 0) {
+        gameArray[1] = n;
+        setArray[4] = 1;
+    }
+    else if (obj.id == "6" && gameArray[5] == 0) {
+        gameArray[1] = n;
+        setArray[5] = 1;
+    }
+    else if (obj.id == "7" && gameArray[6] == 0) {
+        gameArray[1] = n;
+        setArray[6] = 1;
+    }
+    else if (obj.id == "8" && gameArray[7] == 0) {
+        gameArray[1] = n;
+        setArray[7] = 1;
+    }
+    else if (obj.id == "9" && gameArray[8] == 0) {
+        gameArray[1] = n;
+        setArray[8] = 1;
+    }
+    else if (obj.id == "10" && gameArray[9] == 0) {
+        gameArray[1] = n;
+        setArray[9] = 1;
+    }
+    else
+        return;
+        
+    obj.innerHTML = n;
+    
+</script>
