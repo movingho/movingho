@@ -2,92 +2,343 @@
 <html>
 <head>
 	<style>
-table {
-	border : 1px solid violet;
-	border-collapse : collapse;
-}
-td {
-	width : 50px;
-	height : 50px;
-	padding : 0px;
-	font : italic 50px consolas, sans-serif;
-	color : blue;
-	text-align: center;
-	background: linen;
-}
-div#msg {
-	font : italic 18px consolas, sans-serif;
-	color : magenta;
-	margin-top : 10px;
-}
-</style>
-<script>
-	var num1_c = 0, num2_c = 0;
-	var num2_c = 0;
-	var num3_c = 0;
-	var num4_c = 0;
-	
-	function change1() {
-		if (num1_c != 1) {
-		var td = document.getElementById("1");
-		num1 = Math.floor(Math.random() * 3) + 1;	
-		td.innerHTML = num1;
-		num1_c = 1;
-		check();
-		}
-	}
-	
-	function change2() {
-		if (num2_c != 1) {
-		var td = document.getElementById("2");
-		num2 = Math.floor(Math.random() * 3) + 1;	
-		td.innerHTML=num2;	
-		num2_c = 1
-		check();
-		}
-	}
-	
-	function change3() {
-		if (num3_c != 1) {
-		var td = document.getElementById("3");
-		num3 = Math.floor(Math.random() * 3) + 1;	
-		td.innerHTML=num3;
-		num3_c = 1;
-		check();
-		}
-	}
-
-	function change4() {
-		if (num4_c != "1") {
-		var td = document.getElementById("4");
-		num4 = Math.floor(Math.random() * 3) + 1;	
-		td.innerHTML=num4;	
-		num4_c = 1;
-		check();
-		}
-	}
-
-	function check() {
-		if (num1 == num2 == num3 == num4) {
-			var obj = document.getElementById("parent");
-			var newDIV = document.createElement("div");
-			newDIV.innerHTML = "success";
-			obj.appendChild(newDIV);
+		table {
+			border: 1px solid violet;
+			border-collapse: collapse;
 		}
 
-		else {
-			var obj = document.getElementById("parent");
-			var newDIV = document.createElement("div");
-			newDIV.innerHTML = "fail";
-			obj.appendChild(newDIV);
+		td {
+			width: 50px;
+			height: 50px;
+			padding: 0px;
+			font: italic 50px consolas, sans-serif;
+			color: blue;
+			text-align: center;
+			background: linen;
 		}
-	}
-</script>
-<title>실습 14</title>
+
+		div#msg {
+			font: italic 18px consolas, sans-serif;
+			color: magenta;
+			margin-top: 10px;
+		}
+	</style>
+	<script>
+		var num1_c = 0,
+			num2_c = 0,
+			num3_c = 0,
+			num4_c = 0,
+			num5_c = 0,
+			num6_c = 0,
+			num7_c = 0,
+			num8_c = 0,
+			num9_c = 0,
+			num10_c = 0,
+			num1 = 0,
+			num2 = 0,
+			num3 = 0,
+			num4 = 0,
+			num5 = 0,
+			num6 = 0,
+			num7 = 0,
+			num8 = 0,
+			num9 = 0,
+			num10 = 0,
+			cnt_1 = 0,
+			cnt_2 = 0,
+			cnt_3 = 0,
+            sf = 0;
+
+		function change1() {
+			if (num1_c != 1) {
+				var td = document.getElementById("1");
+				num1 = Math.floor(Math.random() * 3) + 1;
+				if (num1 == 1) {
+					cnt_1 += 1;
+                    td.style.color = "red";
+                    td.innerHTML = num1;
+				} else if (num1 == 2) {
+					cnt_2 += 1;
+                    td.style.color = "orange";
+                    td.innerHTML = num1;
+				} else {
+					cnt_3 += 1;
+                    td.style.color = "darkgoldenrod"
+                    td.innerHTML = num1;
+				}
+				num1_c = 1;
+				check();
+			}
+		}
+
+		function change2() {
+			if (num2_c != 1) {
+				var td = document.getElementById("2");
+				num2 = Math.floor(Math.random() * 3) + 1;
+				if (num2 == 1) {
+					cnt_1 += 1;
+                    td.style.color = "red";
+                    td.innerHTML = num2;
+				} else if (num2 == 2) {
+					cnt_2 += 1;
+                    td.style.color = "orange";
+                    td.innerHTML = num2;
+				} else {
+					cnt_3 += 1;
+                    td.style.color = "darkgoldenrod";
+                    td.innerHTML = num2;
+				}
+				num2_c = 1;
+				check();
+			}
+		}
+
+		function change3() {
+			if (num3_c != 1) {
+				var td = document.getElementById("3");
+				num3 = Math.floor(Math.random() * 3) + 1;
+				if (num3 == 1) {
+					cnt_1 += 1;
+                    td.style.color = "red";
+                    td.innerHTML = num3;
+				} else if (num3 == 2) {
+					cnt_2 += 1;
+                    td.style.color = "orange";
+                    td.innerHTML = num3;
+				} else {
+					cnt_3 += 1;
+                    td.style.color = "darkgoldenrod";
+                    td.innerHTML = num3;
+				}
+				num3_c = 1;
+				check();
+			}
+		}
+
+		function change4() {
+			if (num4_c != 1) {
+				var td = document.getElementById("4");
+				num4 = Math.floor(Math.random() * 3) + 1;
+				if (num4 == 1) {
+					cnt_1 += 1;
+                    td.style.color = "red";
+                    td.innerHTML = num4;
+				} else if (num4 == 2) {
+					cnt_2 += 1;
+                    td.style.color = "orange";
+                    td.innerHTML = num4;
+				} else {
+					cnt_3 += 1;
+                    td.style.color = "darkgoldenrod";
+                    td.innerHTML = num4;
+				}
+				num4_c = 1;
+				check();
+			}
+		}
+
+		function change5() {
+			if (num5_c != 1) {
+				var td = document.getElementById("5");
+				num5 = Math.floor(Math.random() * 3) + 1;
+				if (num5 == 1) {
+					cnt_1 += 1;
+                    td.style.color = "red";
+                    td.innerHTML = num5;
+				} else if (num5 == 2) {
+					cnt_2 += 1;
+                    td.style.color = "orange";
+                    td.innerHTML = num5;
+				} else {
+					cnt_3 += 1;
+                    td.style.color = "darkgoldenrod";
+                    td.innerHTML = num5;
+				}
+				num5_c = 1;
+				check();
+			}
+		}
+
+		function change6() {
+			if (num6_c != 1) {
+				var td = document.getElementById("6");
+				num6 = Math.floor(Math.random() * 3) + 1;
+				if (num6 == 1) {
+					cnt_1 += 1;
+                    td.style.color = "red";
+                    td.innerHTML = num6;
+				} else if (num6 == 2) {
+					cnt_2 += 1;
+                    td.style.color = "orange";
+                    td.innerHTML = num6;
+				} else {
+					cnt_3 += 1;
+                    td.style.color = "darkgoldenrod";
+                    td.innerHTML = num6;
+				}
+				num6_c = 1;
+				check();
+			}
+		}
+
+		function change7() {
+			if (num7_c != 1) {
+				var td = document.getElementById("7");
+				num7 = Math.floor(Math.random() * 3) + 1;
+				if (num7 == 1) {
+					cnt_1 += 1;
+                    td.style.color = "red";
+                    td.innerHTML = num7;
+				} else if (num7 == 2) {
+					cnt_2 += 1;
+                    td.style.color = "orange";
+                    td.innerHTML = num7;
+				} else {
+					cnt_3 += 1;
+                    td.style.color = "darkgoldenrod";
+                    td.innerHTML = num7;
+				}
+				num7_c = 1;
+				check();
+			}
+		}
+
+		function change8() {
+			if (num8_c != 1) {
+				var td = document.getElementById("8");
+				num8 = Math.floor(Math.random() * 3) + 1;
+				if (num8 == 1) {
+					cnt_1 += 1;
+                    td.style.color = "red";
+                    td.innerHTML = num8;
+				} else if (num8 == 2) {
+					cnt_2 += 1;
+                    td.style.color = "orange";
+                    td.innerHTML = num8;
+				} else {
+					cnt_3 += 1;
+                    td.style.color = "darkgoldenrod";
+                    td.innerHTML = num8;
+				}
+				num8_c = 1;
+				check();
+			}
+		}
+
+		function change9() {
+			if (num9_c != 1) {
+				var td = document.getElementById("9");
+				num9 = Math.floor(Math.random() * 3) + 1;
+				if (num9 == 1) {
+					cnt_1 += 1;
+                    td.style.color = "red";
+                    td.innerHTML = num9;
+				} else if (num9 == 2) {
+					cnt_2 += 1;
+                    td.style.color = "orange";
+                    td.innerHTML = num9;
+				} else {
+					cnt_3 += 1;
+                    td.style.color = "darkgoldenrod";
+                    td.innerHTML = num9;
+				}
+				num9_c = 1;
+				check();
+			}
+		}
+
+		function change10() {
+			if (num10_c != 1) {
+				var td = document.getElementById("10");
+				num10 = Math.floor(Math.random() * 3) + 1;
+				if (num10 == 1) {
+					cnt_1 += 1;
+                    td.style.color = "red";
+                    td.innerHTML = num10;
+				} else if (num10 == 2) {
+					cnt_2 += 1;
+                    td.style.color = "orange";
+                    td.innerHTML = num10;
+				} else {
+					cnt_3 += 1;
+                    td.style.color = "darkgoldenrod";
+                    td.innerHTML = num10;
+				}
+				num10_c = 1;
+				check();
+			}
+		}
+        
+        function sfcheck() {
+            if (cnt_1 > 4 || cnt_2 > 4 || cnt_3 > 4) {
+                sf = 1;
+            }
+        }
+        
+        function check() {
+            sfcheck();
+			if (
+				num1_c == 1 &&
+				num2_c == 1 &&
+				num3_c == 1 &&
+				num4_c == 1 &&
+				num5_c == 1 &&
+				num6_c == 1 &&
+				num7_c == 1 &&
+				num8_c == 1 &&
+				num9_c == 1 &&
+				num10_c == 1
+			) {
+                var divMsg = document.getElementById("msg");
+				if (sf == 1) {
+					divMsg.innerHTML = "Success(click here to do again)";
+				} else {
+					divMsg.innerHTML = "fail(click here to do again)";
+				}
+			}
+		}
+        
+        function reset() {
+            num1 = 0;
+            num1_c = 0;
+            num2 = 0;
+            num2_c = 0;
+            num3 = 0;
+            num3_c = 0;
+            num4 = 0;
+            num4_c = 0;
+            num5 = 0;
+            num5_c = 0;
+            num6 = 0;
+            num6_c = 0;
+            num7 = 0;
+            num7_c = 0;
+            num8 = 0;
+            num8_c = 0;
+            num9 = 0;
+            num9_c = 0;
+            num10 = 0;
+            num10_c = 0;
+            document.getElementById("1").innerHTML = 0;
+            document.getElementById("2").innerHTML = 0;
+            document.getElementById("3").innerHTML = 0;
+            document.getElementById("4").innerHTML = 0;
+            document.getElementById("5").innerHTML = 0;
+            document.getElementById("6").innerHTML = 0;
+            document.getElementById("7").innerHTML = 0;
+            document.getElementById("8").innerHTML = 0;
+            document.getElementById("9").innerHTML = 0;
+            document.getElementById("10").innerHTML = 0;
+            document.getElementById("msg").innerHTML = "";
+            
+        }
+        
+	</script>
+	<title>실습 14</title>
 </head>
-<body id ="parent">
+<body id="parent">
 	<h3>숫자 게임</h3>
-	<p>각 숫자를 클릭하면 1에서 3사이의 난수로 바뀝니다. 모두 같은 수가 나오면 승리합니다.</p>
+	<p>각 숫자를 클릭하면 1에서 3사이의 난수로 바뀝니다. 5개 이상 같은 수가 나오면 승리합니다.</p>
 	<hr>
 	<table>
 		<tr>
@@ -95,6 +346,14 @@ div#msg {
 			<td id="2" onclick="change2()">0</td>
 			<td id="3" onclick="change3()">0</td>
 			<td id="4" onclick="change4()">0</td>
+			<td id="5" onclick="change5()">0</td>
+			<td id="6" onclick="change6()">0</td>
+			<td id="7" onclick="change7()">0</td>
+			<td id="8" onclick="change8()">0</td>
+			<td id="9" onclick="change9()">0</td>
+			<td id="10" onclick="change10()">0</td>
+		</tr>
 	</table>
+    <div id="msg" onclick="reset()"></div>
 </body>
 </html>
